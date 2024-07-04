@@ -1,0 +1,166 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.bg-container {
+    background-image: url('../img/img3.jpg'); /* Update to the correct path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: relative;
+    padding:10px;
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1.2px;
+}
+
+h1 {
+    margin-top: 3%;
+    animation: fadeIn 2s ease-in-out;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #34a853; /* Change color on hover */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 100px; /* Increased gap */
+    perspective: 1000px;
+}
+
+.carousel-container {
+    flex: 1;
+    display: flex;
+    justify-content:start;
+
+}
+
+.carousel {
+    width: 600px; /* Increased carousel width */
+    overflow: hidden;
+    
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: rotateY(-30deg);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.carousel:hover {
+    transform: rotateY(0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.form-data {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: rotateY(15deg);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    width: 25vw;
+}
+
+.form-data:hover {
+    transform: rotateY(0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.indiv-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px;
+    width: 100%;
+    max-width: 400px;
+}
+
+input, select {
+    background-color: #0b8822a8;
+    width: 150px;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+    color: white;
+    text-align: center;
+    transform: rotateX(10deg);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+input:focus, select:focus {
+    transform: rotateX(0);
+    background-color: #34a853; /* Change background color on focus */
+    color: black; /* Change text color on focus */
+}
+
+.submit {
+    margin-top: 5%;
+    padding: 12px 20px;
+    background-color: #0b8822d8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transform: translateZ(20px);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit:hover {
+    transform: translateZ(30px);
+    background-color: #34a853; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}
+
+.prediction {
+    color: #095617;
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+    transition: color 0.3s ease;
+}
+
+.prediction:hover {
+    color: #34a853; /* Change color on hover */
+}
